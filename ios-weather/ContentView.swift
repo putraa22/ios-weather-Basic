@@ -16,7 +16,7 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            ExtractedViewLinear(isNight: $isNight)
+            ExtractedViewLinear(isNight: isNight)
             
             VStack {
                 Text("Jakarta, ID")
@@ -25,7 +25,7 @@ struct ContentView: View {
                     .padding()
                 
                 VStack(spacing: 10) {
-                    ExtractedViewImage(animationCount: $animationCount, isNight: $isNight)
+                    ExtractedViewImage(animationCount: animationCount, isNight: isNight)
                     
                     Text("78°")
                         .font(.system(size: 70, weight: .medium))
@@ -47,11 +47,7 @@ struct ContentView: View {
                     isNight.toggle()
                     animationCount += 1
                 } label: {
-                    Text("Change Day Time")
-                        .frame(width: 280, height: 50)
-                        .background(.white)
-                        .cornerRadius(8.5)
-                        .font(.system(size: 20, weight: .bold, design: .default))
+                    WeatherButton(title:"Change Day Time", textColor: .white, backgroundColor: .blue)
                 }
                 
                 Spacer()
@@ -81,7 +77,7 @@ struct ExtractedView: View {
                 .foregroundColor(.white)
              
             Image(systemName: imageName)
-                .renderingMode(.original)
+                .symbolRenderingMode(.multicolor)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 50, height: 50)
@@ -95,25 +91,26 @@ struct ExtractedView: View {
 }
 
 struct ExtractedViewLinear: View {
-    @Binding var isNight: Bool
+    var isNight: Bool
     
     var body: some View {
         LinearGradient(gradient: Gradient(colors: [isNight ? .black : .blue, isNight ? .gray : Color("lightBlue")]),
                        startPoint: .topLeading,
                        endPoint: .bottomTrailing)
-        .edgesIgnoringSafeArea(.all)
+        .ignoresSafeArea()
     }
 }
 
 struct ExtractedViewImage: View {
-    @Binding var animationCount: Int
-    @Binding var isNight: Bool
+     var animationCount: Int
+    var isNight: Bool
  
     
     var body: some View {
         Image( systemName: isNight ? "cloud.moon.fill" : "cloud.sun.fill")
-            .renderingMode(.original)
+            .symbolRenderingMode(.multicolor)
             .resizable()
+            .foregroundStyle(.white, .blue)
             .aspectRatio(contentMode: .fit)
             .frame(width: 180, height: 180)
             .symbolEffect(

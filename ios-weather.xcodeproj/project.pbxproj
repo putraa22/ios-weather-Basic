@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE818C3F2C3F803E00BCAA9D /* WeatherButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE818C3E2C3F803E00BCAA9D /* WeatherButton.swift */; };
 		CE90B3BC2C20214A00D16F76 /* ios_weatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90B3BB2C20214A00D16F76 /* ios_weatherApp.swift */; };
 		CE90B3BE2C20214A00D16F76 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90B3BD2C20214A00D16F76 /* ContentView.swift */; };
 		CE90B3C02C20214C00D16F76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE90B3BF2C20214C00D16F76 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE818C3E2C3F803E00BCAA9D /* WeatherButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherButton.swift; sourceTree = "<group>"; };
 		CE90B3B82C20214A00D16F76 /* ios-weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE90B3BB2C20214A00D16F76 /* ios_weatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_weatherApp.swift; sourceTree = "<group>"; };
 		CE90B3BD2C20214A00D16F76 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				CE90B3BD2C20214A00D16F76 /* ContentView.swift */,
 				CE90B3BF2C20214C00D16F76 /* Assets.xcassets */,
 				CE90B3C12C20214C00D16F76 /* Preview Content */,
+				CE818C3E2C3F803E00BCAA9D /* WeatherButton.swift */,
 			);
 			path = "ios-weather";
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			files = (
 				CE90B3BE2C20214A00D16F76 /* ContentView.swift in Sources */,
 				CE90B3BC2C20214A00D16F76 /* ios_weatherApp.swift in Sources */,
+				CE818C3F2C3F803E00BCAA9D /* WeatherButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
